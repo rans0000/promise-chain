@@ -6,9 +6,13 @@
     </head>
     <body>
         <div class="wrapper-all" ng-controller="MainController as main">
-            {{main.val}}
+            <div ng-repeat="item in main.fieldList">
+                <container data-field="item"></container>
+            </div>
+            <!--<container ng-repeat="item in main.fieldList" data-field="item"></container>-->
         </div>
         <script src="js/angular.min.js"></script>
         <script src="js/app.js"></script>
+        <script src="js/directive.js"></script>
     </body>
 </html>

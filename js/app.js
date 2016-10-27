@@ -9,7 +9,7 @@
     MainController.$inject = ['$q', '$http'];
     function MainController ($q, $http) {
         var vm = this;
-        vm.val = 3;
+        vm.fieldList = [];
 
         //load country list
         var countryRequest = $http.get('data/countries.json')
@@ -35,6 +35,7 @@
         function onFieldReuestSuccess (fieldDataArray) {
             var combinedData = combineCountryStateData(fieldDataArray);
             console.log(combinedData);
+            vm.fieldList = combinedData;
         }
 
         function combineCountryStateData (fieldDataArray) {
@@ -51,6 +52,7 @@
                     RequiredFlag: fieldDataArray.statesData[i].RequiredFlag,
                     ColumnSeqNum: fieldDataArray.statesData[i].ColumnSeqNum,
                     DropdownFlag: fieldDataArray.statesData[i].DropdownFlag,
+                    previousId: (i === 0)? undefined : fieldDataArray.statesData[i-1].FlexValueSetIds
                 };
             }
             return fieldData;
