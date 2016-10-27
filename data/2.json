@@ -1,0 +1,67 @@
+{
+    "Response": {
+        "responseCode": "0",
+        "responseMessage": "Success",
+        "responseObject": {
+            "AddressFieldResponse": {
+                "AddressFields": {
+                    "AddressFieldsRec": [{
+                        "FlexValueSetId": 1006220,
+                        "RequiredFlag": "Y",
+                        "ColumnSeqNum": 10,
+                        "EndUserColumnName": "Address Line 1",
+                        "DropdownFlag": "N"
+                    }, {
+                        "FlexValueSetId": 1006220,
+                        "RequiredFlag": "N",
+                        "ColumnSeqNum": 20,
+                        "EndUserColumnName": "Address Line 2",
+                        "DropdownFlag": "N"
+                    }, {
+                        "FlexValueSetId": 1019796,
+                        "RequiredFlag": "Y",
+                        "ColumnSeqNum": 30,
+                        "EndUserColumnName": "Emirate",
+                        "DropdownFlag": "Y"
+                    }, {
+                        "FlexValueSetId": 1019797,
+                        "RequiredFlag": "N",
+                        "ColumnSeqNum": 40,
+                        "EndUserColumnName": "City / Village",
+                        "DropdownFlag": "Y"
+                    }, {
+                        "FlexValueSetId": 1019798,
+                        "RequiredFlag": "N",
+                        "ColumnSeqNum": 50,
+                        "EndUserColumnName": "Region / Area",
+                        "DropdownFlag": "Y"
+                    }, {
+                        "FlexValueSetId": 1006220,
+                        "RequiredFlag": "N",
+                        "ColumnSeqNum": 60,
+                        "EndUserColumnName": "Street",
+                        "DropdownFlag": "N"
+                    }, {
+                        "FlexValueSetId": 1006220,
+                        "RequiredFlag": "N",
+                        "ColumnSeqNum": 70,
+                        "EndUserColumnName": "Building",
+                        "DropdownFlag": "N"
+                    }, {
+                        "FlexValueSetId": 1000277,
+                        "RequiredFlag": "N",
+                        "ColumnSeqNum": 80,
+                        "EndUserColumnName": "Flat Number",
+                        "DropdownFlag": "N"
+                    }, {
+                        "FlexValueSetId": 1015185,
+                        "RequiredFlag": "N",
+                        "ColumnSeqNum": 90,
+                        "EndUserColumnName": "PO Box",
+                        "DropdownFlag": "N"
+                    }]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "AddressRec": [
+        {
+            "ColumnName": "address_id",
+            "FieldValue": "16378"
+        }, {
+            "ColumnName": "primary_flag",
+            "FieldValue": "Y"
+        }, {
+            "ColumnName": "address_type",
+            "FieldValue": null
+        }, {
+            "ColumnName": "Address Line 1",
+            "FieldValue": "11"
+        }, {
+            "ColumnName": "Address Line 2",
+            "FieldValue": null
+        }, {
+            "ColumnName": "Address Line 3",
+            "FieldValue": null
+        }, {
+            "ColumnName": "Address Line 4",
+            "FieldValue": null
+        }, {
+            "ColumnName": "TOWN_CITY",
+            "FieldValue": "chn"
+        }, {
+            "ColumnName": "Pin Code",
+            "FieldValue": null
+        }, {
+            "ColumnName": "Country",
+            "FieldValue": "India"
+        }
+    ]
+}

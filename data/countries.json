@@ -1,0 +1,17 @@
+{
+    "AddressRec": [
+        {
+            "ColumnName": "Address Line 1",
+            "FieldValue": "16378"
+        }, {
+            "ColumnName": "Address Line 2",
+            "FieldValue": "Y"
+        }, {
+            "ColumnName": "Address Line 3",
+            "FieldValue": null
+        }, {
+            "ColumnName": "Address Line 4",
+            "FieldValue": "11"
+        }
+    ]
+}

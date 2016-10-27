@@ -1,0 +1,39 @@
+{
+    "Response": {
+        "responseCode": "0",
+        "responseMessage": "Success",
+        "responseObject": {
+            "AddressFieldResponse": {
+                "AddressFields": {
+                    "AddressFieldsRec": [
+                        {
+                            "FlexValueSetId": 1006220,
+                            "RequiredFlag": "Y",
+                            "ColumnSeqNum": 10,
+                            "EndUserColumnName": "Address Line 1",
+                            "DropdownFlag": "N"
+                        }, {
+                            "FlexValueSetId": 1006220,
+                            "RequiredFlag": "N",
+                            "ColumnSeqNum": 20,
+                            "EndUserColumnName": "Address Line 2",
+                            "DropdownFlag": "Y"
+                        }, {
+                            "FlexValueSetId": 1019796,
+                            "RequiredFlag": "Y",
+                            "ColumnSeqNum": 30,
+                            "EndUserColumnName": "Address Line 3",
+                            "DropdownFlag": "Y"
+                        }, {
+                            "FlexValueSetId": 1019797,
+                            "RequiredFlag": "N",
+                            "ColumnSeqNum": 40,
+                            "EndUserColumnName": "Address Line 4",
+                            "DropdownFlag": "N"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

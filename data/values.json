@@ -1,0 +1,34 @@
+{
+    "Response": {
+        "responseCode": "0",
+        "responseMessage": "Success",
+        "responseObject": {
+            "AddressDropdownResponse": {
+                "AddressDropdownRec": {
+                    "AddressDropdownList": [{
+                        "ColumnId": "1",
+                        "ColumnName": "Abu Dhabi"
+                    }, {
+                        "ColumnId": "2",
+                        "ColumnName": "Dubai"
+                    }, {
+                        "ColumnId": "3",
+                        "ColumnName": "Sharjah"
+                    }, {
+                        "ColumnId": "4",
+                        "ColumnName": "Ajman"
+                    }, {
+                        "ColumnId": "5",
+                        "ColumnName": "Umm al-Qaiwain"
+                    }, {
+                        "ColumnId": "6",
+                        "ColumnName": "Ras al-Khaimah"
+                    }, {
+                        "ColumnId": "7",
+                        "ColumnName": "Fujairah"
+                    }]
+                }
+            }
+        }
+    }
+}
