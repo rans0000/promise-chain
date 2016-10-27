@@ -28,28 +28,34 @@
         });
 
         //combine the data when fields fields and their options are available
-        $q.all([countryRequest, statesRequest])
+        $q.all({countryData: countryRequest, statesData: statesRequest})
             .then(onFieldReuestSuccess)
             .catch(onFieldReuestError);
 
         function onFieldReuestSuccess (fieldDataArray) {
-            //console.log(fieldDataArray);
+            var combinedData = combineCountryStateData(fieldDataArray);
+            console.log(combinedData);
+        }
+
+        function combineCountryStateData (fieldDataArray) {
+            //this function should combines country and state data using columnname field.
+            //currently not done in ths function
             var fieldData = [];
             var i = 0;
-            var len = fieldDataArray[0].length;
+            var len = fieldDataArray.countryData.length;
             for(; i < len; ++i){
                 fieldData[i] = {
-                    ColumnName: fieldDataArray[0][i].ColumnName,
-                    FieldValue: fieldDataArray[0][i].FieldValue,
-                    FlexValueSetId: fieldDataArray[1][i].FlexValueSetId,
-                    RequiredFlag: fieldDataArray[1][i].RequiredFlag,
-                    ColumnSeqNum: fieldDataArray[1][i].ColumnSeqNum,
-                    DropdownFlag: fieldDataArray[1][i].DropdownFlag,
+                    ColumnName: fieldDataArray.countryData[i].ColumnName,
+                    FieldValue: fieldDataArray.countryData[i].FieldValue,
+                    FlexValueSetId: fieldDataArray.statesData[i].FlexValueSetId,
+                    RequiredFlag: fieldDataArray.statesData[i].RequiredFlag,
+                    ColumnSeqNum: fieldDataArray.statesData[i].ColumnSeqNum,
+                    DropdownFlag: fieldDataArray.statesData[i].DropdownFlag,
                 };
             }
-            console.log(fieldData);
+            return fieldData;
         }
-        
+
         function onFieldReuestError (error) {
             console.log('some error occurred...');
             console.log(error);
