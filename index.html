@@ -6,13 +6,12 @@
     </head>
     <body>
         <div class="wrapper-all" ng-controller="MainController as main">
-            <div ng-repeat="item in main.fieldList track by $index">
-                <container data-field="item" data-index="{{$index}}"></container>
+            <div class="container" ng-repeat="item in main.fieldList track by $index">
+                <select name="a" ng-show="item.DropdownFlag === 'Y'"></select>
+                <input type="text" ng-show="item.DropdownFlag === 'N'" value="{{item.FieldValue}}">
             </div>
-            <!--<container ng-repeat="item in main.fieldList" data-field="item"></container>-->
         </div>
         <script src="js/angular.min.js"></script>
         <script src="js/app.js"></script>
-        <script src="js/directive.js"></script>
     </body>
 </html>
