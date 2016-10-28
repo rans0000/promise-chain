@@ -7,8 +7,9 @@
     <body>
         <div class="wrapper-all" ng-controller="MainController as main">
             <div class="container" ng-repeat="item in main.fieldList track by $index">
-                <select name="a" ng-show="item.DropdownFlag === 'Y'"></select>
-                <input type="text" ng-show="item.DropdownFlag === 'N'" value="{{item.FieldValue}}">
+                <label for="a">{{item.ColumnName}}</label>
+                <select name="a" ng-show="item.DropdownFlag === 'Y'" ng-options="option.ColumnName for option in item.optionList track by option.ColumnId" ng-model="item.FieldValue"></select>
+                <input name="a" type="text" ng-show="item.DropdownFlag === 'N'" ng-model="item.FieldValue">
             </div>
         </div>
         <script src="js/angular.min.js"></script>

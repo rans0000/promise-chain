@@ -33,13 +33,27 @@
 
         //combine the data when fields fields and their options are available
         $q.all({countryData: countryRequest, statesData: statesRequest})
-            .then(onFieldReuestSuccess)
-            .catch(onFieldReuestError);
+            .then(onFieldRequestSuccess)
+            .catch(onFieldRequestError);
 
-        function onFieldReuestSuccess (fieldDataArray) {
+        function onFieldRequestSuccess (fieldDataArray) {
             var combinedData = combineCountryStateData(fieldDataArray);
             console.log(combinedData);
             vm.fieldList = combinedData;
+
+            loadOptionListData()
+                .then(function (response) {
+                console.log(response);
+                //find the first selectbox and populate its options
+                var i=0;
+                var len = combinedData.length;
+                for(; i< len; ++i){
+                    if(combinedData[i].DropdownFlag === 'Y'){
+                        combinedData[i].optionList = response;
+                        break;
+                    }
+                }
+            });
         }
 
         function combineCountryStateData (fieldDataArray) {
@@ -63,7 +77,21 @@
             return fieldData;
         }
 
-        function onFieldReuestError (error) {
+        function loadOptionListData (flexId, flexValueSetId, baseFeld) {
+            //create argument object here...
+            //...
+
+            return $http.get('data/values.json')
+                .then(function (response) {
+                var data = response.data.Response.responseObject.AddressDropdownResponse.AddressDropdownRec.AddressDropdownList;
+                return data;
+            })
+                .catch(function (error) {
+                return error;
+            });
+        }
+
+        function onFieldRequestError (error) {
             console.log('some error occurred...');
             console.log(error);
         }
