@@ -11,22 +11,23 @@
             restrict: 'E',
             templateUrl: 'js/container.template.html',
             scope: {
-                field : '=field'
+                field: '=field',
+                index: '@index'
             },
-            link: containerLink,
+            //link: containerLink,
             controller: ContainerController,
             controllerAs: 'vm',
             bindToController: true
         };
+        return directiveObject;
         
-        function containerLink (scope, element, attributes) {
+        /*function containerLink (scope, element, attributes) {
             //sconsole.log(ctrl);
-        }
+        }*/
         
         function ContainerController () {
             var vm = this;
         }
-        return directiveObject;
     }
     
 })();

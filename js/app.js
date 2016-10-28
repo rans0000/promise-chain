@@ -10,14 +10,18 @@
     function MainController ($q, $http) {
         var vm = this;
         vm.fieldList = [];
+        var countryRequest;
+        init();
 
-        //load country list
-        var countryRequest = $http.get('data/countries.json')
-        .then(function (response) {
-            var data = response.data.AddressRec;
-            //console.log(data);
-            return data;
-        });
+        function init () {
+            //load country list
+            countryRequest = $http.get('data/countries.json')
+                .then(function (response) {
+                var data = response.data.AddressRec;
+                //console.log(data);
+                return data;
+            });
+        }
 
         //load states list
         var statesRequest = $http.get('data/states.json')
@@ -40,7 +44,7 @@
 
         function combineCountryStateData (fieldDataArray) {
             //this function should combines country and state data using columnname field.
-            //currently not done in ths function
+            //currently not done in this function
             var fieldData = [];
             var i = 0;
             var len = fieldDataArray.countryData.length;
@@ -52,6 +56,7 @@
                     RequiredFlag: fieldDataArray.statesData[i].RequiredFlag,
                     ColumnSeqNum: fieldDataArray.statesData[i].ColumnSeqNum,
                     DropdownFlag: fieldDataArray.statesData[i].DropdownFlag,
+                    optionList: [],
                     previousId: (i === 0)? undefined : fieldDataArray.statesData[i-1].FlexValueSetIds
                 };
             }

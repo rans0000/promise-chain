@@ -6,8 +6,8 @@
     </head>
     <body>
         <div class="wrapper-all" ng-controller="MainController as main">
-            <div ng-repeat="item in main.fieldList">
-                <container data-field="item"></container>
+            <div ng-repeat="item in main.fieldList track by $index">
+                <container data-field="item" data-index="{{$index}}"></container>
             </div>
             <!--<container ng-repeat="item in main.fieldList" data-field="item"></container>-->
         </div>
